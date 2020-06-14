@@ -67,7 +67,7 @@ dream:
   enable: true
   showTitle: true
   title: armlib站点文化理念
-  text: 记录设计开发点滴，努力出几样实用的作品，梦想是组织个五六个人的小团队，为美好生活添砖加瓦！
+  text: 记录设计开发点滴，努力出几样实用的作品，小梦想是把实验室发展成五六个人的小团队，为美好生活添砖加瓦！
 
 # Whether to display the musics.
 # 是否在首页显示音乐.
@@ -77,11 +77,11 @@ music:
     enable: true
     show: 听听音乐
   autoHide: true    # hide automaticaly
-  server: netease   #require	music platform: netease, tencent, kugou, xiami, baidu
-  type: playlist    #require song, playlist, album, search, artist
-  id: 2821191017     #require	song id / playlist id / album id / search keyword
+  server: netease   #netease（网易云音乐），tencent（QQ音乐），kugou（酷狗音乐），xiami（虾米音乐），baidu（百度音乐）
+  type: playlist    #可选song（歌曲），playlist（歌单），album（专辑），search（搜索关键字），artist（歌手）
+  id: 2535475359    #2821191017 `id`获取示例: 浏览器打开网易云音乐，点击我喜欢的音乐歌单，地址栏有一串数字，`playlist`的`id`即为这串数字
   fixed: true       # 开启吸底模式
-  autoplay: false   # 是否自动播放
+  autoplay: true   # 是否自动播放
   theme: '#42b983'
   loop: 'all'       # 音频循环播放, 可选值: 'all', 'one', 'none'
   order: 'random'   # 音频循环顺序, 可选值: 'list', 'random'
@@ -116,8 +116,8 @@ recommend:
 
 # Configure website favicon and LOGO
 # 配置网站favicon和网站LOGO
-favicon: /favicon.png
-logo: /medias/logo.png
+favicon: /armlib-favicon.png
+logo: /medias/armlib-logo.png
 
 # The configuration of the second button in the home banner,
 # including the display name of the button, the font awesome icon, and the hyperlink to the button.
@@ -132,6 +132,8 @@ indexbtn:
 # icon/button will not show up if you leave the corresponding socialLink empty
 # 首页 banner 中的第二行个人信息配置，留空即不启用
 socialLink:
+  weixinid: eFreeLib
+  weixin: /medias/weixin-mp.jpg
   github:  https://github.com/armlib
   email: 710896969@qq.com
   facebook: # https://www.facebook.com/xxx
@@ -203,7 +205,7 @@ clicklove:
 # profile in about page, including avatars, career, and personal introductions.
 # 在”关于”页面中配置个人信息，包括头像、职业和个人介绍.
 profile:
-  avatar: /medias/avatar.jpg
+  avatar: /medias/armlib-logo-y1.jpg
   career: 嵌入式软硬件的小爱好者
   introduction: 嵌入式硬件 嵌入式软件 MCU ARM 物联网 蓄电池检测
 
@@ -211,7 +213,7 @@ profile:
 # If you don't want to display this `My Projects` content, you can deactivate or delete this configuration.
 # 在“关于”页面配置"我的项目"信息，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
 myProjects:
-  enable: true
+  enable: false
   data:
     hexo-theme-matery:
       icon: fas fa-file-alt
@@ -235,22 +237,22 @@ myProjects:
 mySkills:
   enable: true
   data:
-    Java:
+    嵌入式C语言:
       background: 'linear-gradient(to right, #FF0066 0%, #FF00CC 100%)'
       percent: 85%
-    JavaScript:
+    STM32:
       background: 'linear-gradient(to right, #9900FF 0%, #CC66FF 100%)'
       percent: 80%
-    HTML5:
+    MSP430:
       background: 'linear-gradient(to right, #2196F3 0%, #42A5F5 100%)'
       percent: 80%
-    CSS:
+    MATLAB:
       background: 'linear-gradient(to right, #00BCD4 0%, #80DEEA 100%)'
       percent: 70%
-    SQL:
+    电池检测:
       background: 'linear-gradient(to right, #4CAF50 0%, #81C784 100%)'
       percent: 90%
-    程序设计:
+    数字模拟电路设计:
       background: 'linear-gradient(to right, #FFEB3B 0%, #FFF176 100%)'
       percent: 75%
 
@@ -258,7 +260,7 @@ mySkills:
 # If you don't want to display this `Gallery` content, you can deactivate or delete this configuration.
 # 在“关于”页面配置"我的相册"图片，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
 myGallery:
-  enable: true
+  enable: false
   data:
     - /medias/featureimages/0.jpg
     - /medias/featureimages/1.jpg

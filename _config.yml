@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: armlib
-subtitle: '一人嵌入式软硬件工作室'
+title: 灵魔剑芯
+subtitle: '嵌入式软硬件开源实验室'
 description: '喜欢设计嵌入式软硬件的小爱好者'
 keywords: 嵌入式 硬件 软件 单片机MCU ARM 物联网
 author: armed
@@ -15,8 +15,12 @@ timezone: ''
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://armlib.github.io
 root: /
-permalink: :year/:month/:day/:title/
-permalink_defaults:
+#permalink: :year/:month/:day/:title/
+#permalink_defaults:
+permalink: posts/:abbrlink/   #优化文章永久链接为数字编号npm install hexo-abbrlink --save
+abbrlink:
+  alg: crc32 #support crc16(default) and crc32
+  rep: dec   #support dec(default) and hex
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
@@ -45,13 +49,42 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
+  enable: false
   line_number: true
   auto_detect: false
   tab_replace: ''
   wrap: true
   hljs: false
 
+prism_plugin:   #代码高亮hexo插件npm i -S hexo-prism-plugin
+  mode: 'preprocess'    # realtime/preprocess
+  theme: 'tomorrow'
+  line_number: false    # default false
+  custom_css:
+  
+search:    #搜索hexo插件 npm install hexo-generator-search --save
+  path: search.xml
+  field: post
+  
+
+  
+githubEmojis:  #添加emoji表情支持 npm install hexo-filter-github-emojis --save
+  enable: true
+  className: github-emoji
+  inject: true
+  styles:
+  customEmojis:
+  
+feed:    #添加 RSS 订阅支持  npm install hexo-generator-feed --save
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+  
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
