@@ -4,9 +4,9 @@ menu:
   Index:
     url: /
     icon: fas fa-home
-  Tags:
-    url: /tags
-    icon: fas fa-tags
+  #Tags:
+    #url: /tags
+    #icon: fas fa-tags
   Categories:
     url: /categories
     icon: fas fa-bookmark
@@ -367,7 +367,7 @@ minivaline:
 githubLink:
   enable: true
   url: https://github.com/armlib
-  title: Fork Me
+  title: 访问我的GitHub
 
 # The password verification feature of read post. To use this feature,
 # activate the configuration item and write the 'password' key and Cipher in the post's Front-matter.

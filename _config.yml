@@ -7,7 +7,7 @@ title: 灵魔剑芯
 subtitle: '嵌入式软硬件开源实验室'
 description: '喜欢设计嵌入式软硬件的小爱好者'
 keywords: 嵌入式 硬件 软件 单片机MCU ARM 物联网
-author: armed
+author: Armed
 language: zh-CN
 timezone: ''
 
@@ -17,11 +17,7 @@ url: http://armlib.github.io
 root: /
 #permalink: :year/:month/:day/:title/
 #permalink_defaults:
-<<<<<<< HEAD
 permalink: posts/:abbrlink/   #优化文章永久链接为数字编号npm install hexo-abbrlink --save
-=======
-permalink: posts/:abbrlink/
->>>>>>> 4b4774cdd7da8e3f9e4ee5d13859e7442ef2051b
 abbrlink:
   alg: crc32 #support crc16(default) and crc32
   rep: dec   #support dec(default) and hex
